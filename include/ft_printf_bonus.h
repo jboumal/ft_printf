@@ -6,13 +6,13 @@
 /*   By: jboumal <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 16:24:04 by jboumal           #+#    #+#             */
-/*   Updated: 2022/01/15 16:24:39 by jboumal          ###   ########.fr       */
+/*   Updated: 2022/03/28 14:08:20 by jboumal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_BONUS_H
 # define FT_PRINTF_BONUS_H
-# include "libft/libft.h"
+# include "libft.h"
 # include <stdarg.h>
 
 typedef struct s_flags

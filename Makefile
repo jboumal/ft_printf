@@ -4,6 +4,7 @@ SRCS		= ft_printf.c \
 			  write_pointer.c \
 			  write_decimal.c \
 			  write_hexa.c
+SRCS		:= $(addprefix src/,$(SRCS))
 SRCS_BONUS	= ft_printf_bonus.c \
 			  flags_bonus.c \
 			  set_flags_bonus.c \
@@ -11,15 +12,16 @@ SRCS_BONUS	= ft_printf_bonus.c \
 			  write_pointer_bonus.c \
 			  write_decimal_bonus.c \
 			  write_hexa_bonus.c
+SRCS_BONUS	:= $(addprefix src/,$(SRCS_BONUS))
 OBJS		= $(SRCS:.c=.o)
 OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 NAME		= libftprintf.a
 CC			= gcc
 MAKE		= make
 RM			= rm -f
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror -Iinclude -Ilibft
 .c.o:
-			$(CC) $(CFLAGS) -I ft_printf.h -I ft_printf_bonus.h -c $< -o $(<:.c=.o)
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 $(NAME):	$(OBJS)
 			$(MAKE) all -C libft
 			cp ./libft/libft.a libftprintf.a
